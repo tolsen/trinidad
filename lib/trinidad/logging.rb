@@ -76,7 +76,7 @@ module Trinidad
       
       prefix, suffix = web_app.environment, '.log' # {prefix}{date}{suffix}
       file_handler = FileHandler.new(web_app.log_dir, prefix, suffix)
-      file_handler.rotatable = true # {prefix}{date}{suffix}
+      file_handler.rotatable = false # {prefix}{date}{suffix}
       file_handler.formatter = web_app_formatter
       logger.add_handler(file_handler)
       logger
